@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/zcool-kuaile': ^4.5.8
   '@iconify-json/carbon': ^1.1.9
   '@iconify-json/ep': ^1.1.8
   '@qianphong/eslint-config': ^0.1.4
@@ -18,7 +17,6 @@ specifiers:
   esno: ^0.16.3
   file-saver: ^2.0.5
   fontmin: ^0.9.9
-  html-to-image: ^1.10.8
   sass: ^1.55.0
   typescript: ^4.8.4
   unocss: ^0.45.29
@@ -33,12 +31,10 @@ dependencies:
   '@vueuse/core': 9.3.1_vue@3.2.41
   echarts: 5.4.0
   file-saver: 2.0.5
-  html-to-image: 1.10.8
   vue: 3.2.41
   vue-echarts: 6.2.3_echarts@5.4.0+vue@3.2.41
 
 devDependencies:
-  '@fontsource/zcool-kuaile': 4.5.8
   '@iconify-json/carbon': 1.1.9
   '@iconify-json/ep': 1.1.8
   '@qianphong/eslint-config': 0.1.4_z4bbprzjrhnsfa24uvmcbu7f5q
@@ -254,10 +250,6 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@fontsource/zcool-kuaile/4.5.8:
-    resolution: {integrity: sha512-QYTeD8mLEdi5apAZ1TRnbIc3mszW783FmAEVHi47G6uZ8fFu1cQSvYLpGjzdE6uUKdfPs62eQCg5nGqyMls2LQ==}
     dev: true
 
   /@gar/promisify/1.1.3:
@@ -2591,10 +2583,6 @@ packages:
     dependencies:
       lru-cache: 6.0.0
     dev: true
-
-  /html-to-image/1.10.8:
-    resolution: {integrity: sha512-t+JyFJwKDCp4ZwBp4iC/wqw0meQDDc77Qs8OFl5P7RGlIP3LQMvwpD7VXxqQfC7/TfC+GKYlFP6WDYfXTmXHfw==}
-    dev: false
 
   /htmlparser2/8.0.1:
     resolution: {integrity: sha512-4lVbmc1diZC7GUJQtRQ5yBAeUCL1exyMwmForWkRLnwyzWBFxN633SALPMGYaWZvKe9j1pRZJpauvmxENSp/EA==}
