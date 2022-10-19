@@ -1,0 +1,27 @@
+// @import '@fontsource/zcool-kuaile';
+
+@font-face {
+  font-family: jldys;
+  src: url(./fonts/TengXiangJiaLiDaYuanJian-1.ttf);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'jldys', sans-serif;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+:root {
+  --c-primary: #ff7e7e;
+}
