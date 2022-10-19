@@ -6,7 +6,6 @@
     <div relative h="[calc(100%-4rem)]">
       <SwitchType />
       <AMap />
-      <Scoreboard />
     </div>
   </div>
 </template>

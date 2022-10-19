@@ -1,7 +1,7 @@
 import Fontmin from 'fontmin'
 import { LEVEL_LIST, PROVINCE_LIST } from '../src/const'
 
-const SAFE_LIST = ['中国制霸', '正常地图', '简化地图', '1234567890']
+const SAFE_LIST = ['中国制霸', '正常地图', '简化地图', '1234567890', '分数：']
 
 const text =
   PROVINCE_LIST.join('') +

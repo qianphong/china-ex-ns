@@ -2,7 +2,7 @@ import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import {
   GeoComponent,
-  ToolboxComponent,
+  TitleComponent,
   TooltipComponent,
   VisualMapComponent,
 } from 'echarts/components'
@@ -13,7 +13,7 @@ use([
   CanvasRenderer,
   GeoComponent,
   VisualMapComponent,
-  ToolboxComponent,
   TooltipComponent,
+  TitleComponent,
   MapChart,
 ])

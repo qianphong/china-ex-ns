@@ -4,6 +4,8 @@ export const isDark = useDark()
 
 export const chartType = useLocalStorage<ChartType>(CHART_TYPE, 'normal')
 
+export const eventBus = useEventBus<{ name: 'share' }>('chart-event-bus')
+
 export const data = useLocalStorage<number[]>(
   CACHE_KEY,
   PROVINCE_LIST.map(() => 0),

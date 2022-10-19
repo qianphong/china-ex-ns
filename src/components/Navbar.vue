@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-import { isDark } from '@/state'
+import { eventBus, isDark } from '@/state'
+
+async function download() {
+  eventBus.emit({ name: 'share' })
+}
 const toggleDark = useToggle(isDark)
 </script>
 
@@ -35,7 +39,9 @@ const toggleDark = useToggle(isDark)
       </div>
       <div text="2xl">中国制霸</div>
       <div class="flex items-center">
-        <ShareImage />
+        <button icon-btn m="x2" @click="download">
+          <div i-ep:download title="下载图片" />
+        </button>
         <button icon-btn m="x2" @click="toggleDark()">
           <div i-ep-sunny dark:i-ep-moon />
         </button>

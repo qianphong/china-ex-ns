@@ -8,6 +8,8 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AMap: typeof import('./../src/components/AMap.vue')['default']
+    Download: typeof import('./../src/components/Download.vue')['default']
+    DownloadImage: typeof import('./../src/components/DownloadImage.vue')['default']
     Navbar: typeof import('./../src/components/Navbar.vue')['default']
     Scoreboard: typeof import('./../src/components/Scoreboard.vue')['default']
     Selector: typeof import('./../src/components/Selector.vue')['default']

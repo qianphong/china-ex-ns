@@ -2,16 +2,17 @@
 import VChart from 'vue-echarts'
 import type { ECharts } from 'echarts'
 import { registerMap } from 'echarts/core'
+import { saveAs } from 'file-saver'
 import { LEVEL_LIST, PROVINCE_LIST } from '@/const'
 import SimpleSVG from '@/assets/map/simple.svg?raw'
 import NormalJSON from '@/assets/map/china.json'
-import { chartType, data, isDark } from '@/state'
+import { chartType, data, eventBus, isDark, score } from '@/state'
 
 registerMap('simple', {
   svg: SimpleSVG,
 })
-// 地图名称必须注册为 china 才显示南海诸岛，淦
-// 排查了半天
+
+// 地图名称必须注册为 china 才显示南海诸岛，淦排查了半天
 registerMap('china', NormalJSON as any)
 
 const selectorRef = ref<HTMLDivElement>()
@@ -31,9 +32,19 @@ watch(chartType, () => {
   unref(chartRef)?.clear()
 })
 
-const option = computed<EChartsOption>(() => {
+const option = computed(() => {
+  console.log('update')
   return {
     backgroundColor: 'transparent',
+    title: {
+      text: `分数：${score.value}`,
+      left: '5%',
+      bottom: '5%',
+      textStyle: {
+        fontSize: 45,
+        fontFamily: 'jldys',
+      },
+    },
     tooltip: {
       show: true,
       triggerOn: 'click',
@@ -49,9 +60,10 @@ const option = computed<EChartsOption>(() => {
     visualMap: {
       type: 'piecewise',
       right: '5%',
-      bottom: '10%',
+      bottom: '5%',
       min: -1,
       max: 5,
+      itemGap: 0,
       splitNumber: 6,
       inRange: {
         color: LEVEL_LIST.map(item => item.color),
@@ -70,7 +82,6 @@ const option = computed<EChartsOption>(() => {
     series: [
       {
         type: 'map',
-        // 地图名称必须叫 china 才显示南海诸岛，淦
         map: chartType.value === 'normal' ? 'china' : 'simple',
         roam: true,
         label: {
@@ -92,13 +103,27 @@ const option = computed<EChartsOption>(() => {
         })),
       },
     ],
-  }
+  } as EChartsOption
 })
 
 onMounted(() => {
   if (isDefined(selectorRef))
     unref(selectorRef)?.parentNode?.removeChild(unref(selectorRef))
 })
+
+// 地图 eventbus
+eventBus.on(({ name }) => {
+  if (name === 'share') downLoad()
+})
+
+function downLoad() {
+  const dataURL = chartRef.value?.getDataURL({
+    type: 'png',
+    pixelRatio: 1,
+    backgroundColor: unref(isDark) ? '#222' : '#efb4b4',
+  })
+  if (dataURL) saveAs(dataURL, `中国制霸-${unref(chartType)}-${Date.now()}.png`)
+}
 </script>
 
 <template>
