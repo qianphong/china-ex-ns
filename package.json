@@ -2,9 +2,9 @@
   "name": "china-ex-ns",
   "version": "1.0.0",
   "scripts": {
-    "predev": "esno scripts/compressFont.ts",
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
+    "typecheck": "vue-tsc --noEmit",
     "preview": "vite preview",
     "compress:font": "esno scripts/compressFont.ts"
   },
