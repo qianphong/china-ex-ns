@@ -1,7 +1,7 @@
 import Fontmin from 'fontmin'
 import { LEVEL_LIST, PROVINCE_LIST } from '../src/const'
 
-const SAFE_LIST = ['中国制霸', '正常地图', '简化地图']
+const SAFE_LIST = ['中国制霸', '正常地图', '简化地图', '1234567890']
 
 const text =
   PROVINCE_LIST.join('') +
@@ -16,7 +16,7 @@ const fontmin = new Fontmin()
       hinting: false, // keep ttf hint info (fpgm, prep, cvt). default = true
     }),
   )
-  .dest('public/fonts')
+  .dest('public/assets/fonts')
 
 fontmin.run((err, files) => {
   if (err) throw err
