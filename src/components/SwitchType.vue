@@ -15,7 +15,7 @@ function setChartType(type: ChartType = 'simple') {
     bg="white dark:transparent"
     :class="{ normal: chartType === 'normal' }"
   >
-    <span w="1/2" @click="setChartType('normal')">普通地图</span>
+    <span w="1/2" @click="setChartType('normal')">正常地图</span>
     <span w="1/2" @click="setChartType()"> 简化地图 </span>
   </div>
 </template>
