@@ -86,7 +86,6 @@ const option = computed(() => {
         label: {
           show: chartType.value === 'normal',
           fontFamily: 'jldys',
-          fontSize: 20,
         },
         itemStyle: {
           borderWidth: 2,
