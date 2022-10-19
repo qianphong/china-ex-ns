@@ -35,7 +35,7 @@ function setChartType(type: ChartType = 'simple') {
       height: 100%;
       z-index: -1;
       transition: left 0.3s;
-      border-radius: 6px;
+      border-radius: 4px;
     }
   }
 

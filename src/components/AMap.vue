@@ -33,7 +33,6 @@ watch(chartType, () => {
 })
 
 const option = computed(() => {
-  console.log('update')
   return {
     backgroundColor: 'transparent',
     title: {
@@ -87,10 +86,9 @@ const option = computed(() => {
         label: {
           show: chartType.value === 'normal',
           fontFamily: 'jldys',
+          fontSize: 20,
         },
         itemStyle: {
-          areaColor: '#fff',
-          borderColor: '#000',
           borderWidth: 2,
         },
         emphasis: {
@@ -119,8 +117,8 @@ eventBus.on(({ name }) => {
 function downLoad() {
   const dataURL = chartRef.value?.getDataURL({
     type: 'png',
-    pixelRatio: 1,
-    backgroundColor: unref(isDark) ? '#222' : '#efb4b4',
+    pixelRatio: 2,
+    backgroundColor: unref(isDark) ? '#333' : '#efb4b4',
   })
   if (dataURL) saveAs(dataURL, `中国制霸-${unref(chartType)}-${Date.now()}.png`)
 }
