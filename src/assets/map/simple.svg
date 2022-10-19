@@ -36,7 +36,7 @@
     <path name="海南" d="M615 897h78v46H615Z" />
   </g>
   <path name="南海诸岛" d="M827 941L827 897L908 897L908 941" />
-  <g id="地名" font-size="30" font-family="ZCOOL KuaiLe">
+  <g id="地名" font-size="30" font-family="jldys">
     <text x="659" y="266">内蒙古</text>
     <text x="951" y="123">黑龙江</text>
     <text x="966" y="242">吉林</text>

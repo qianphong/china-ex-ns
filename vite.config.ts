@@ -8,12 +8,10 @@ import Components from 'unplugin-vue-components/vite'
 export default defineConfig({
   base: '/china-ex-ns/',
   plugins: [
-    Vue({
-      reactivityTransform: true,
-    }),
+    Vue(),
     UnoCSS(),
     AutoImport({
-      imports: ['vue', 'vue/macros', '@vueuse/core'],
+      imports: ['vue', '@vueuse/core'],
       dts: 'types/auto-imports.d.ts',
     }),
     Components({
