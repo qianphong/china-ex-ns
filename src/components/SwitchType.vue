@@ -11,7 +11,7 @@ function setChartType(type: ChartType = 'simple') {
     class="type-switch absolute top-5% left-5% z-99 rounded-6px"
     p="1"
     text="center lg"
-    bg="#fff dark:#f9c5c5"
+    bg="#fcd9d9 dark:#666"
     :class="{ normal: chartType === 'normal' }"
   >
     <div flex relative w="50" h-9 leading-9>
