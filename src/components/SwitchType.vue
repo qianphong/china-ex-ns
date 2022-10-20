@@ -11,10 +11,10 @@ function setChartType(type: ChartType = 'simple') {
     class="type-switch absolute top-5% left-5% z-99 rounded-6px"
     p="1"
     text="center lg"
-    bg="white op-60 dark:primary dark:op-10"
+    bg="#fff dark:#f9c5c5"
     :class="{ normal: chartType === 'normal' }"
   >
-    <div flex relative w="50" h-10 leading-10>
+    <div flex relative w="50" h-9 leading-9>
       <span w="1/2" @click="setChartType('normal')">正常地图</span>
       <span w="1/2" @click="setChartType()"> 简化地图 </span>
     </div>

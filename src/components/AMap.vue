@@ -35,15 +35,26 @@ watch(chartType, () => {
 const option = computed(() => {
   return {
     backgroundColor: 'transparent',
-    title: {
-      text: `分数：${score.value}`,
-      left: '5%',
-      bottom: '5%',
-      textStyle: {
-        fontSize: 45,
-        fontFamily: 'jldys',
+    title: [
+      {
+        text: '中国制霸',
+        left: '5%',
+        top: '5%',
+        textStyle: {
+          fontSize: 40,
+          fontFamily: 'jldys',
+        },
       },
-    },
+      {
+        text: `分数：${score.value}`,
+        left: '5%',
+        bottom: '5%',
+        textStyle: {
+          fontSize: 45,
+          fontFamily: 'jldys',
+        },
+      },
+    ],
     tooltip: {
       show: true,
       triggerOn: 'click',
